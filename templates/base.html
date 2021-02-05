@@ -51,6 +51,16 @@
 <!--<script src="dist/js/pages/dashboard3.js'"></script>
 -->
 <script>
+  $('#catinput').hide()
+  $("#addcat").click(function(){
+    $('#catinput').show()
+  });
+
+$("#backcat").click(function(){
+  $('#catinput').hide()
+});
+</script>
+<script>
   $(document).ready(function(){
     $('#myModal').on('shown.bs.modal', function () {
       $('#myInput').trigger('focus')
