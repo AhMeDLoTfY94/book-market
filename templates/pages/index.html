@@ -23,7 +23,7 @@
               <div class="card-body">
                 <div class="d-flex">
                   <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">500</span>
+                    <span class="text-bold text-lg">{{allbooks}}</span>
                     <span>اجمالي عدد الكتب</span>
                   </p>  
                 </div>
@@ -110,7 +110,7 @@
           <div class="col-4 ">
             <ul class="nav">
           {% for cat in categorys %}
-              <li class="nav-item ">
+              <li class="nav-item cat{{cat.id}} ">
                 <a id="" class="nav-link bg-primary" href="#">{{cat.name}}</a>
               </li>
           {% endfor %}
@@ -124,7 +124,7 @@
 
         <!-- الكتب -->
         {% for book in books %}
-            <div id="" class="col-md-4">
+            <div id="" class="col-md-4 bookhide book{{book.category.id}} book{{book.status}}">
                 <!-- Widget: user widget style 1 -->
               <div id="" class="card card-widget widget-user ">
                 <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -134,8 +134,8 @@
                   <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">تعديل</a>
-                  <a class="dropdown-item" href="#">حذف</a>
+                  <a class="dropdown-item" href="{% url 'update' book.id %}">تعديل</a>
+                  <a class="dropdown-item" href="{% url 'delete' book.id %}">حذف</a>
               <!-- Button trigger modal -->
                 </div>
               </div>
