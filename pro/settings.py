@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'n6n_he7j#9qp++z4mwi!5(t75n%0(4sqedn@81ndzq6g9=*4)^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['book-lotfy.herokuapp.com','127.0.0.1']
 
@@ -125,3 +125,7 @@ STATICFILES_DIRS=[
 ]
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL= '/media/'
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
