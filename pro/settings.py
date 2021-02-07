@@ -26,7 +26,7 @@ SECRET_KEY = 'n6n_he7j#9qp++z4mwi!5(t75n%0(4sqedn@81ndzq6g9=*4)^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['book-lotfy.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['book-lotfy.herokuapp.com','localhost', '127.0.0.1']
 
 
 # Application definition
